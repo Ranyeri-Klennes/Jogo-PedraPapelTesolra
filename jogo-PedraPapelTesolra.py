@@ -1,16 +1,19 @@
 from random import randint
+import os 
 
 maquina = randint(1,4)
 
 while True:
     # - ler opção do usuário (1-pedra, 2-papel, 3-tesoura) e mostrar opção selecionada;
-    print('\nEscolha um número para sua opção desejada:')
+    print('Escolha um número para sua opção desejada:')
     print('1 - PEDRA')
     print('2 - PAPEL')
     print('3 - TESOURA')
     print('-'*20)
     voce = int(input())
     print('-'*20)
+    
+    os.system('cls')
 
     # - programa sortear algum número, mostrar na tela e comparar com o do usuário;
     # - comparar vocees que são melhores que os outros;
@@ -31,6 +34,7 @@ while True:
         print('PEDRA quebra a TESOURA!')
         print('VOCÊ GANHOU!')
         print('-'*20)
+
     elif voce == 2 and maquina == 2:
         print('Você e a máquina escolheram PAPEL!')
         print('EMPATE!')
@@ -47,6 +51,7 @@ while True:
         print('PAPEL é picado pela TESOURA!')
         print('VOCÊ PERDEU!')
         print('-'*20)
+
     elif voce == 3 and maquina == 3:
         print('Você e a máquina escolheram TESOURA!')
         print('EMPATE!')
